@@ -54,6 +54,7 @@ const Footer = () => {
         <div className='d-flex justify-content-center legal container'>
           <p style={{textAlign:"center"}}>Copyright @2022. All rights reserved.</p>
         </div>
+        <a href="#" class="up-icon"><i class="fas fa-chevron-circle-up"></i></a>
       </footer>
     </>
   )

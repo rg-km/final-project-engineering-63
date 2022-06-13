@@ -5,79 +5,8 @@
   margin: 0;         
   box-sizing: border-box;
 }
-.cards{
-  padding-top: 10px;
-  font-family: 'mali', sans-serif;
-}
 .account{
   padding-top: 12px;
-}
-.logo{
-  padding-top: 7px;
-}
-.start1{
-  background-color: white;
-  color: #d00000;
-  box-sizing: border-box;
-width: 145px;
-height: 43px;
-border-radius: 20px;
-}
-.start2{
-  background-color: white;
-  color: #3DB2D2;
-  box-sizing: border-box;
-width: 145px;
-height: 43px;
-border-radius: 20px;
-}
-.start3{
-  background-color: white;
-  color: #ffba08;
-  box-sizing: border-box;
-width: 145px;
-height: 43px;
-border-radius: 20px;
-}
-.card-img1{
-  padding: 40px;
-  background-color: #d00000;
-}
-.card-img2{
-  padding: 40px;
-  background-color: #3DB2D2;
-}
-.card-img3{
-  padding: 40px;
-  background-color: #ffba08;
-}
-.card-body1{
-  background: #d00000;
-  border-radius: 20px;
-  border-style: none;
-}
-.card-body2{
-  background-color: #3DB2D2;
-  border-radius: 20px;
-  border-style: none;
-  
-}
-.card-body3{
-  background-color: #ffba08;
-  border-radius: 20px;
-  border-style: none;
-}
-.card-holder{
-  position: absolute;
-  width: 1092px;
-  height: 426px;
-  left: 125px;
-  top: 657px;
-  padding : 30px 84px 72px 84px;
-  font-family: "Mali", sans-serif;
-  background: #FFFFFF;
-  box-shadow: 5px 8px 8px 8px rgba(0, 0, 0, 0.25);
-  border-radius: 50px;
 }
 .up-icon{
 	position: fixed;
@@ -112,81 +41,7 @@ a {
   color: #000;
 }
 /*------------Globa----------*/
-/*------------header----------*/
-header {
-  padding: 15px 0;
-  background-color: #3db2d2;
-  box-sizing: border-box;
-  height:80px;
-}
-header img{
-  width: 20%;
-}
-header ul {
-  display:inline-flex;
-}
-header ul li {
-  display: inline-flex;
-  margin-left: 30px;
-}
-header ul li a {
-  font-weight: 500;
-  font-size: larger;
-  transition: 0.5s;
-  padding-top: 10px;
-}
-header ul li a:hover {
-  font-weight: 500;
-}
-header.active {
-  position: sticky;
-  top: 0;
-  left: 0;
-  background-color: #3db2d2;
-  box-shadow: 0 2px 28px 0 rgb(0 0 0 / 6%);
-  width: 100%;
-  z-index: 10;
-}
 
-@media screen and (max-width: 768px) {
-  header .icon {
-    display: none;
-  }
-  .nav-links {
-    display: none;
-  }
-  .nav-links-sidebar {
-    position: absolute;
-    display: block;
-    background-color: #fff;
-    left: 50px;
-    top: 75px;
-    transition: 0.5s;
-    width: 100%;
-    height: 30vh;
-    z-index: 5;
-  }
-
-  .nav-links-sidebar {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 30px;
-  }
-  header ul li {
-    margin-bottom: 30px;
-  }
-
-  .navbar-items-icon {
-    display: block;
-    position: absolute;
-    right: 30px;
-    font-size: 30px;
-    color: #000;
-    border: 1px solid #000;
-    padding: 5px 10px;
-  }
-}
-/*------------header----------*/
 /*------------ home ----------*/
 .left,
 .right {
@@ -196,16 +51,6 @@ header.active {
 }
 .flex {
   display: flex;
-}
-
-.boxCard{
-  height:120px;
-  background-color: white;
-}
-
-.topMarign {
-  margin-top: 600px !important;
-  background-color: #E6F5F9;
 }
 .home {
   height: 80vh;

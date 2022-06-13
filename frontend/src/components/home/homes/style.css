@@ -1,0 +1,87 @@
+/*------------ home ----------*/
+.left,
+.right {
+width: 200%;
+top: 30px;
+position: relative;
+}
+.flex {
+display: flex;
+}
+.home {
+height: 80vh;
+background-color: #3db2d2;
+background-image: linear-gradient(#3db2d2, white);
+}
+.home .img {
+height: 90vh;
+width: 100%;
+position: relative;
+}
+.home img {
+position: absolute;
+width: 896px;
+height: 441px;
+right: -20%;
+}
+.home h1 {
+font-family: 'Mali';
+font-style: normal;
+font-weight: 700;
+font-size: 40px;
+line-height: 65px;
+letter-spacing: 0.2em;
+z-index: 3;
+position: absolute;
+color: #032B43;
+}
+.primary-btn {
+    padding: 15px 40px;
+    margin-top: 150px;
+    margin-left: 50px;
+    background: #ffba08;
+    border-radius: 20px;
+}
+.primary-btn:hover {
+    background: #d00000;
+    box-shadow: 0 13px 27px 0 rgb(245 78 162 / 25%);
+}
+.home .right {
+    margin-top: 15%;
+}
+.home .SocailIcon {
+    margin: 30px 0;
+}
+.home p {
+    margin-bottom: 20px;
+}
+p {
+    color: #6185a5;
+    line-height: 30px;
+}
+@media screen and (max-width: 768px) {
+/*------------ home ----------*/
+.left,
+.right {
+    width: 100%;
+}
+.home .container {
+    flex-direction: column;
+    flex-direction: column-reverse;
+}
+.home {
+    height: 134vh;
+}
+.home .img {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.home img {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    transform: scale(1);
+}
+}  
+/*------------ home ----------*/

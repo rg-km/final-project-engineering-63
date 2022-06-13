@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from "react-router-dom"
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import LogoutIcon from '@mui/icons-material/Logout';
+import "./style.css"
 
 const Header = () => {
   const [sidebar, setSidebar] = useState(false)
@@ -22,6 +23,9 @@ const Header = () => {
             <ul>
               <li>
                 <Link to='/' style={{textDecoration: "none", color : "black"}}>Home</Link>
+              </li>
+              <li>
+                <Link to='/' style={{textDecoration: "none", color : "black"}}>Login</Link>
               </li>
               <li>
                 <Link to='/'style={{textDecoration: "none", color : "black"}}>Scoreboard</Link>

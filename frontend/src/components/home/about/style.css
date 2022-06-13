@@ -1,0 +1,12 @@
+.card-holder{
+    position: absolute;
+    width: 1092px;
+    height: 426px;
+    left: 125px;
+    top: 657px;
+    padding : 30px 84px 72px 84px;
+    font-family: "Mali", sans-serif;
+    background: #FFFFFF;
+    box-shadow: 5px 8px 8px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+}
