@@ -18,7 +18,6 @@ const Home = () => {
           {/* </div> */}
         </div>
       </section>
-      <a href="#" class="up-icon"><i class="fas fa-chevron-circle-up"></i></a>
     </>
   )
 }
