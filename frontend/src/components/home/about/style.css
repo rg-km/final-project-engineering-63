@@ -10,3 +10,80 @@
     box-shadow: 5px 8px 8px 8px rgba(0, 0, 0, 0.25);
     border-radius: 50px;
 }
+/*------------ about ----------*/
+.mtop {
+    margin-top: 50px;
+}
+h3 {
+    font-size: 15px;
+    font-weight: 500;
+    font-family: "mali";
+    text-transform: uppercase;
+    color: #000000;
+    margin: 20px 0;
+}
+.heading{
+    padding-bottom: 30px;
+
+}
+.heading h1 {
+    font-size: 30px;
+}
+.about p {
+    margin-bottom: 20px;
+}
+.about .left {
+    padding-right: 30px;
+}
+
+.about .img {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.about img {
+    object-fit: contain;
+}
+.about .img::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50px;
+    right: 0;
+    background-color: #000;
+    width: 600px;
+    height: 86vh;
+    z-index: -1;
+}
+@media screen and (min-width: 768px) {
+    /*------------ about ----------*/
+    .about .img {
+    width: 100%;
+    height: 100%;
+    }
+    .about img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    }
+    .about .img::after {
+    display: none;
+    }
+    /*------------ about ----------*/
+}
+@media screen and (min-width: 2560px) {
+    .card-holder{
+        position: absolute;
+        width: 1092px;
+        height: 426px;
+        left: 740px;
+        top: 657px;
+        padding : 30px 84px 72px 84px;
+        font-family: "Mali", sans-serif;
+        background: #FFFFFF;
+        box-shadow: 5px 8px 8px 8px rgba(0, 0, 0, 0.25);
+        border-radius: 50px;
+    }
+}    

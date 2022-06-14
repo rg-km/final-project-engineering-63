@@ -1,11 +1,11 @@
 /*------------ footer ----------*/
 footer {
-    background-color: #08071c;
+    background-color:#3db2d2;
     padding: 100px 0 0 0;
-    color: #fff;
+    color: #000000;
 }
 footer p {
-    color: #fff;
+    color: #000000;
     margin: 20px 0;
 }
 footer .SocailIcon i {
@@ -17,7 +17,7 @@ footer h2 {
     font-size: 20px;
 }
 footer li {
-    color: #fff;
+    color: #000000;
     margin-bottom: 15px;
 }
 footer li:before {
@@ -26,14 +26,14 @@ footer li:before {
     vertical-align: middle;
     line-height: 10px;
     margin-right: 20px;
-    color: #3DB2D2;
+    color: #000000;
 }
 footer .box p {
     margin: 0;
     margin-top: 15px;
 }
 footer span {
-    color: #3DB2D2;
+    color: #000000;
     opacity: 1;
 }
 footer .icon {
@@ -41,7 +41,7 @@ footer .icon {
     display: flex;
 }
 footer .icon i {
-    color: #3DB2D2;
+    color: #000000;
     margin-right: 20px;
     width: 20px;
     height: 20px;
@@ -49,7 +49,7 @@ footer .icon i {
 .legal {
     display: flex;
     justify-content: space-between;
-    border-top: 1px solid rgb(255, 255, 255);
+    border-top: 1px solid rgb(0, 0, 0);
     margin-top: 50px;
     padding: 20px 0;
 }

@@ -1,4 +1,5 @@
 import React from "react"
+import "./style.css"
 
 const Footer = () => {
   return (
@@ -6,7 +7,7 @@ const Footer = () => {
       <footer>
         <div className='container grid1'>
           <div className='box'>
-            <img src='./assets/logo2.png' alt='' />
+            <img src='./assets/logo3.png' alt='' />
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             <br></br>
             <div className='SocailIcon'>
