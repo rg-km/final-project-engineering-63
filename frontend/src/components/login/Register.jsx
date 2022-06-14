@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Login = () => {
+const Register = () => {
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
   const [error, setError] = React.useState('');
@@ -29,7 +29,9 @@ const Login = () => {
       <div className="container">
         <div className="login-box">
           <form onSubmit={handleSubmit}>
-            <h2>Log In</h2>
+            <h2>Register</h2>
+            <label>Name</label>
+            <input type="text" placeholder="Name" id="username" value={email} onChange={(e) => setEmail(e.target.value)}></input>
             <label>Email</label>
             <input type="text" placeholder="Email" id="useremail" value={email} onChange={(e) => setEmail(e.target.value)}></input>
             <label>Password</label>
@@ -39,9 +41,9 @@ const Login = () => {
               {loading ? 'Wait' : 'Log In'}
             </button>
             <div className="signuplink">
-              <a value>Don't have an account? </a>
+              <a value>Already have an account?</a>
               <a className="Create-Account" href="#">
-                Create here
+                Log In
               </a>
             </div>
           </form>
@@ -51,4 +53,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;
