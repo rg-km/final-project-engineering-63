@@ -25,7 +25,7 @@ const Header = () => {
                 <Link to='/' style={{textDecoration: "none", color : "black"}}>Home</Link>
               </li>
               <li>
-                <Link to='/' style={{textDecoration: "none", color : "black"}}>Login</Link>
+                <Link to='login' style={{textDecoration: "none", color : "black"}}>Login</Link>
               </li>
               <li>
                 <Link to='/'style={{textDecoration: "none", color : "black"}}>Scoreboard</Link>
