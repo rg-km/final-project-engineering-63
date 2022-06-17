@@ -25,7 +25,7 @@ return(
       <div className="greetings">
          <h1> Hallo, </h1><h1> Welcome Back!</h1>
       </div>
-      <div className="container">
+      <div className="container-login">
         <div className='login-box'>
           <form onSubmit={handleSubmit}>
         <h2>Log In</h2>
