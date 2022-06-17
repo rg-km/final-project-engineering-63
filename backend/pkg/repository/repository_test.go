@@ -4,19 +4,18 @@ import (
 	"context"
 	"database/sql"
 	"fmt"
-	"time"
+	"go_jwt/model/domain"
+	"go_jwt/pkg/repository"
 
 	_ "github.com/mattn/go-sqlite3"
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
-	"github.com/rg-km/final-project-engineering-63/backend/model/domain"
-	"github.com/rg-km/final-project-engineering-63/backend/pkg/repository"
 )
 
 var _ = Describe("Repository Test", func() {
 	var db *sql.DB
 	var err error
-	var authRepo *repository.AuthRepositorySQLite
+	var authRepo *repository.UserRepositorySQLite
 
 	BeforeEach(func() {
 		db, err = sql.Open("sqlite3", "./repository_test.db")
@@ -38,7 +37,7 @@ var _ = Describe("Repository Test", func() {
 			);
 
 			INSERT INTO users (
-				username, email, password, phone, role, is_login, created_at, updated_at
+				username, email, password, role, is_login, created_at, updated_at
 			) VALUES 
 			('admin', 'admin@gmail.com', 'admin123', 'admin', 0, '2022-06-13 00:00:00', '2022-06-04 00:00:00'),
 			('rudi', 'rudi@gmail.com', '1234', 'guest', 0, '2022-06-13 00:00:00', '2022-06-04 00:00:00');
@@ -48,7 +47,7 @@ var _ = Describe("Repository Test", func() {
 			panic(err)
 		}
 
-		authRepo = repository.NewAuthRepository(db)
+		authRepo = repository.NewUserRepository(db)
 
 	})
 
@@ -95,14 +94,12 @@ var _ = Describe("Repository Test", func() {
 		When("Save user successfully", func() {
 			It("should return user", func() {
 				user, err := authRepo.Save(context.TODO(), domain.UserDomain{
-					Id:        2,
-					Username:  "rudi",
-					Email:     "rudi@gmail.com",
-					Password:  "1234",
-					Role:      "guest",
-					IsLogin:   false,
-					CreatedAt: time.Now(),
-					UpdatedAt: time.Now(),
+					Id:       2,
+					Username: "rudi",
+					Email:    "rudi@gmail.com",
+					Password: "1234",
+					Role:     "guest",
+					IsLogin:  false,
 				})
 				Expect(err).ToNot(HaveOccurred())
 
@@ -122,8 +119,8 @@ var _ = Describe("Repository Test", func() {
 				Expect(err).ToNot(HaveOccurred())
 				Expect(user.IsLogin).To(Equal(false))
 
-				userIdLogin := user.Id
-				isSuccesLogout, err := authRepo.Logout(context.TODO(), userIdLogin)
+				usernameLogin := user.Username
+				isSuccesLogout, err := authRepo.Logout(context.TODO(), usernameLogin)
 				Expect(err).ToNot(HaveOccurred())
 				Expect(isSuccesLogout).To(Equal(true))
 			})
