@@ -41,7 +41,7 @@ var _ = Describe("Repository Test", func() {
 				username, email, password, phone, role, is_login, created_at, updated_at
 			) VALUES 
 			('admin', 'admin@gmail.com', 'admin123', 'admin', 0, '2022-06-13 00:00:00', '2022-06-04 00:00:00'),
-			('navis', 'navis@gmail.com', '1234', 'guest', 0, '2022-06-13 00:00:00', '2022-06-04 00:00:00');
+			('rudi', 'rudi@gmail.com', '1234', 'guest', 0, '2022-06-13 00:00:00', '2022-06-04 00:00:00');
 		`)
 
 		if err != nil {
@@ -96,7 +96,7 @@ var _ = Describe("Repository Test", func() {
 			It("should return user", func() {
 				user, err := authRepo.Save(context.TODO(), domain.UserDomain{
 					Id:        2,
-					Username:  "dwi",
+					Username:  "rudi",
 					Email:     "rudi@gmail.com",
 					Password:  "1234",
 					Role:      "guest",
@@ -106,7 +106,7 @@ var _ = Describe("Repository Test", func() {
 				})
 				Expect(err).ToNot(HaveOccurred())
 
-				Expect(user.Username).To(Equal("dwi"))
+				Expect(user.Username).To(Equal("rudi"))
 				Expect(user.Email).To(Equal("rudi@gmail.com"))
 				Expect(user.Password).To(Equal("1234"))
 				Expect(user.Role).To(Equal("guest"))
