@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap');
+
+* > * {
+    font-family: 'Comfortaa', cursive;
+    margin: 0;
+}
+
+:root{
+    --primary-color: #FFBA08;
+    --secondary-color: #032B43;
+    --tertiary-color: #D00000;
+}
+
+.board {
+    text-align: center;
+}
+
+.board .scoreboard{
+    margin-bottom: 1em;
+    margin-top: 150px;
+    font-size: 40px;
+    color: var(--secondary-color)
+}
+
+.board .courses{
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.board .courses > button{
+    border: 1px solid var(--primary-color);
+    padding: .5em 2em;
+    border-radius: 50px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.board .courses > button:hover{
+    background-color: var(--primary-color);
+    color: var(--color-light);
+}
+
+.active{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.board .back {
+    position: relative;
+    justify-content: center;
+    margin-top: 10em;
+    color: var(--secondary-color);
+    font-size: 20px;
+
+}
+
+.board .back > button {
+    border: 0;
+    padding: .5em 8em;
+    border-radius: 20px;
+    background-color: var(--primary-color);
+    cursor: pointer;
+    color: var(--secondary-color);
+}
+
+#scores{
+    display: flex;
+    margin-top: 3em;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    text-align: left;
+    margin-bottom: 1em;
+    }
+
+#scores .flex{
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+    text-align: left;
+    margin-bottom: 2em;
+    border-bottom: 1px solid var(--tertiary-color);
+}
+
+#scores .flex > .number, .name, .score, .duration{
+    padding: 1em 3em;
+}

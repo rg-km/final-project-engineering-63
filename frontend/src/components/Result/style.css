@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap');
+
+* > * {
+    font-family: 'Comfortaa', cursive;
+    margin: 0;
+}
+
+:root{
+    --primary-color: #FFBA08;
+    --secondary-color: #032B43;
+    --tertiary-color: #D00000;
+}
+
+.result {
+    text-align: center;
+}
+
+.result .title{
+    margin-bottom: 1em;
+    margin-top: 150px;
+    font-size: 40px;
+    color: var(--secondary-color)
+}
+
+#isResult{
+    display: flex;
+    margin-top: 3em;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    text-align: left;
+    margin-bottom: 2em;
+    padding: 1;
+}
+
+#isResult .flex{
+    display: flex;
+    border: 2px solid var(--tertiary-color);
+    border-radius: 10px;
+    padding: 5em;
+}
+
+#isResult .flex .isText{
+    padding: 1em 1em;
+    color : var(--secondary-color);
+    text-align: center;
+    text-decoration: underline;
+    font-weight: bolder;
+}
+
+#isResult .flex .text .correctScore{
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 32px;
+}
+
+#isResult .flex .text .wrongScore{
+    text-align: center;
+    color: var(--tertiary-color);
+    font-size: 32px;
+}
+
+#isResult .flex .text .times{
+    text-align: center;
+    color: #3DB2D2;
+    font-size: 30px;
+}
+
+.result .toScoreboard {
+    position: relative;
+    justify-content: center;
+    margin-top: 5em;
+    color: var(--secondary-color);
+    font-size: 20px;
+
+}
+
+.result .toScoreboard > button {
+    border: 0;
+    padding: .5em 8em;
+    border-radius: 20px;
+    background-color: var(--primary-color);
+    cursor: pointer;
+    color: var(--secondary-color);
+}
