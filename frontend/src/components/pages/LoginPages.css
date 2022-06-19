@@ -69,18 +69,11 @@
   
   button[type=submit] {
     background-color: #FFBA08;
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+    width: 145px;
+    height: 40px;
+    left: 1231px;
+    top: 213px;
     border-radius: 20px;
-    padding: 10px;
-    padding-bottom: 10px;
-    margin-top: 80px;
-    font-size: 24px;
-    border: none;
-    outline: none;
-    width: 60%;
-    margin-left: 20%;
   }
   
   .signuplink{
