@@ -45,7 +45,7 @@ return (
             </label>
         <div className='course-timer'>{stopwatch}</div>
     </div>
-    <button type="submit">Submit</button>
+    <button type="submit-answer">Submit</button>
     <button type="next">Next</button>
     </div>
     );
