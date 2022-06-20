@@ -69,10 +69,10 @@
   
   button[type=submit] {
     background-color: #FFBA08;
-    width: 145px;
-    height: 40px;
+    width: 50%;
+    height: 50px;
     left: 1231px;
-    top: 213px;
+    top: 200px;
     border-radius: 20px;
   }
   
