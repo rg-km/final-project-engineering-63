@@ -1,16 +1,16 @@
 import React from "react"
 import "./App.css"
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
-import Footer from "./components/home/Footer"
-import Header from "./components/home/header/Header"
-import HomePages from "./components/pages/HomePages"
-import LoginPages from "./components/pages/LoginPages"
+// import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
+// import Footer from "./components/home/Footer"
+// import Header from "./components/home/header/Header"
+// import HomePages from "./components/pages/HomePages"
+// import LoginPages from "./components/pages/LoginPages"
 import CoursePages from "./components/pages/CoursePages"
 
 const App = () => { 
   return (
     <>
-      <Router>
+      {/* <Router>
         <Header />
         <Switch>
           <Route path='/' exact component={HomePages} />
@@ -18,7 +18,8 @@ const App = () => {
           <Route path='/course' exact component={CoursePages} />
         </Switch>
         <Footer />
-      </Router>
+      </Router> */}
+      <CoursePages/>
     </>
   )
 }
