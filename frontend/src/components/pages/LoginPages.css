@@ -1,12 +1,12 @@
 * {
   box-sizing: border-box;
+  
 }
 
 body {
   font-family: cursive;
   color: rgba(3, 43, 67, 1);
   margin: 0;
-  background: linear-gradient(90deg, rgba(61, 178, 210, 1) 25%, rgba(255, 255, 255, 1) 55%);
 }
 
 .container-login {

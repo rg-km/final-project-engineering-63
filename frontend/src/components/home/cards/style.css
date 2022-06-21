@@ -36,7 +36,13 @@ border-radius: 20px;
 }
 .login2{
 margin-top: 10%;
-margin-left: 42%;
+}
+.login3{
+    text-align: center;
+}
+p{
+    color: black;
+    font-weight: bold;
 }
 .card-img1{
     padding: 40px;

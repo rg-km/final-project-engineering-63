@@ -13,7 +13,7 @@ const Cards = () => {
     <>
       <section className='about topMarign'>
         <div className='heading'>
-        <div className="cards" id="course">
+        <div className="cards" id="card">
             <center><h1>Choose a Course!</h1> </center>
           <div className='container flex d-flex gap-4 mt-5'>
 <Card style={{ width: '18rem' }} className="border-0  bg-transparent">
@@ -28,7 +28,7 @@ const Cards = () => {
         Start
       </button></center>
       <Modal show={show} onHide={handleClose}>
-        <Modal.Body>We see you haven't logged in yet, would you like to do it now?
+        <Modal.Body className="login3"><p>We see you haven't logged in yet,</p><p>would you like to do it now?</p>
         <Button className="login2" variant="warning" onClick={handleClose}>
         <Link to='login' style={{textDecoration: "none", color : "black"}}>Log In</Link>
           </Button>
