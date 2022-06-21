@@ -6,6 +6,7 @@ import Header from "./components/home/header/Header"
 import HomePages from "./components/pages/HomePages"
 import LoginPages from "./components/pages/LoginPages"
 import CoursePages from "./components/pages/CoursePages"
+import ScoreboardPages from "./components/pages/scoreboardPages"
 
 const App = () => { 
   return (
@@ -16,6 +17,7 @@ const App = () => {
           <Route path='/' exact component={HomePages} />
           <Route path='/login' exact component={LoginPages} /> 
           <Route path='/course' exact component={CoursePages} />
+          <Route path='/board' exact component={ScoreboardPages} />
         </Switch>
         <Footer />
       </Router>
