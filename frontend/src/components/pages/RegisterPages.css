@@ -2,10 +2,10 @@
   box-sizing: border-box;
 }
 
-.gradient {
+body {
   font-family: cursive;
   color: rgba(3, 43, 67, 1);
-  margin-top: -10px;
+  margin: 0;
   background: linear-gradient(90deg, rgba(61, 178, 210, 1) 25%, rgba(255, 255, 255, 1) 55%);
 }
 
@@ -18,8 +18,8 @@
 .greetings-register {
   position: absolute;
   font-size: 25px;
-  margin-top: 80px;
-  margin-left: 330px;
+  margin-top: 150px;
+  margin-left: 300px;
   text-align: center;
   max-width: 100%;
   display: block;
@@ -31,19 +31,19 @@
   max-width: 100%;
   display: block;
   height: auto;
-  margin-left: 210px;
-  margin-top: -590px;
+  margin-left: 150px;
+  margin-top: -400px;
 }
 
 .register-box {
   max-width: 100%;
-  margin-top: 30px;
-  margin-bottom: 130px;
-  margin-left: 550px;
+  margin-top: 150px;
+  margin-bottom: 80px;
+  margin-left: 450px;
   flex-basis: 400px;
   background: #fff;
   padding: 50px;
-  box-shadow: 5px 5px 10px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
   border-radius: 50px;
   display: flex;
   flex-direction: column;
@@ -79,8 +79,8 @@ button[type='submit'] {
   font-size: 24px;
   border: none;
   outline: none;
-  width: 60%;
-  margin-left: 20%;
+  min-width: 170px;
+  height: 50px;
 }
 
 .signuplink {
