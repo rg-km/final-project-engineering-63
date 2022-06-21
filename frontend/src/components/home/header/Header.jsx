@@ -28,7 +28,7 @@ const Header = () => {
                 <Link to='login' style={{textDecoration: "none", color : "black"}}>Login</Link>
               </li>
               <li>
-                <Link to='/'style={{textDecoration: "none", color : "black"}}>Scoreboard</Link>
+                <Link to='/board'style={{textDecoration: "none", color : "black"}}>Scoreboard</Link>
               </li>
   <li className="account"><AccountCircleIcon/>
   <NavDropdown id="navbarScrollingDropdown">
