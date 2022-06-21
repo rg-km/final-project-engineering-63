@@ -1,13 +1,16 @@
 import React from 'react';
-import Login from '../login/Login';
-import GreatingsImage from '../../../public/assets/greating-image.png';
+import Register from '../login/Register';
+import './RegisterPages.css';
 
 const RegisterPages = () => {
   return (
     <>
-      <Login />
-      <div className="login-image">
-        <img src={GreatingsImage} alt="" height={400} width={400} />
+      <div className="gradient">
+        <Register />
+
+        <div className="register-image">
+          <img src="./assets/greating-image.png" alt="" height={400} width={400} />
+        </div>
       </div>
     </>
   );

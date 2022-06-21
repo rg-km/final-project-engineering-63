@@ -2,24 +2,24 @@
   box-sizing: border-box;
 }
 
-body {
+.gradient {
   font-family: cursive;
   color: rgba(3, 43, 67, 1);
-  margin: 0;
+  margin-top: -10px;
   background: linear-gradient(90deg, rgba(61, 178, 210, 1) 25%, rgba(255, 255, 255, 1) 55%);
 }
 
-.container {
+.container-register {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.greetings {
+.greetings-register {
   position: absolute;
   font-size: 25px;
-  margin-top: 150px;
-  margin-left: 300px;
+  margin-top: 80px;
+  margin-left: 330px;
   text-align: center;
   max-width: 100%;
   display: block;
@@ -27,23 +27,23 @@ body {
   font-style: normal;
 }
 
-.login-image {
+.register-image {
   max-width: 100%;
   display: block;
   height: auto;
-  margin-left: 150px;
-  margin-top: -400px;
+  margin-left: 210px;
+  margin-top: -590px;
 }
 
-.login-box {
+.register-box {
   max-width: 100%;
-  margin-top: 150px;
-  margin-bottom: 80px;
-  margin-left: 450px;
+  margin-top: 30px;
+  margin-bottom: 130px;
+  margin-left: 550px;
   flex-basis: 400px;
   background: #fff;
   padding: 50px;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 5px 5px 10px 10px rgba(0, 0, 0, 0.25);
   border-radius: 50px;
   display: flex;
   flex-direction: column;
@@ -51,7 +51,7 @@ body {
   justify-content: center;
 }
 
-.login-box h2 {
+.register-box h2 {
   color: #d00000;
   text-align: center;
   padding-bottom: 20px;
