@@ -1,0 +1,146 @@
+/*------------ footer ----------*/
+footer {
+    background-color:#3db2d2;
+    padding: 100px 0 0 0;
+    color: #000000;
+}
+footer p {
+    color: #000000;
+    margin: 20px 0;
+}
+footer .SocailIcon i {
+    background-color: #fff;
+    border: 1px solid #fff;
+}
+footer h2 {
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+footer li {
+    color: #000000;
+    margin-bottom: 15px;
+}
+footer li:before {
+    content: "·";
+    font-size: 40px;
+    vertical-align: middle;
+    line-height: 10px;
+    margin-right: 20px;
+    color: #000000;
+}
+footer .box p {
+    margin: 0;
+    margin-top: 15px;
+}
+footer span {
+    color: #000000;
+    opacity: 1;
+}
+footer .icon {
+    margin-top: 20px;
+    display: flex;
+}
+footer .icon i {
+    color: #000000;
+    margin-right: 20px;
+    width: 20px;
+    height: 20px;
+}
+.legal {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgb(0, 0, 0);
+    margin-top: 50px;
+    padding: 20px 0;
+}
+/*------------Globa----------*/
+.SocailIcon i {
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 10px;
+    border-radius: 50%;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.SocailIcon i:hover {
+    color: #fff;
+}
+.facebook {
+    color: #4267b2;
+    border: 1px solid #4267b2;
+}
+.facebook:hover {
+    background: #4267b2;
+}
+.instagram {
+    color: #dc2743;
+    border: 1px solid #dc2743;
+}
+.instagram:hover {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+.twitter {
+    color: #38a1f3;
+    border: 1px solid #38a1f3;
+}
+.twitter:hover {
+    background-color: #38a1f3;
+}
+.youtube {
+    color: #e92525;
+    border: 1px solid #e92525;
+}
+.youtube:hover {
+    background-color: #e92525;
+}
+.pinterest {
+    color: #c8232c;
+    border: 1px solid #c8232c;
+}
+.pinterest:hover {
+    background-color: #c8232c;
+}
+.dribbble {
+    color: #ee72a2;
+    border: 1px solid #ee72a2;
+}
+.dribbble:hover {
+    background-color: #ee72a2;
+}
+button {
+    background: none;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 15px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+/*------------ wrapperOne ----------*/
+.grid1 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+}
+.wrapperOne {
+    background: #38d16a;
+    text-align: center;
+}
+.wrapperOne h1 {
+    color: #fff;
+}
+.wrapperOne p {
+    font-size: 14px;
+    margin: 10px 0;
+}
+/*------------ wrapperOne ----------*/
+@media screen and (max-width: 768px) {
+footer .grid1 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/*------------ footer ----------*/
+}
