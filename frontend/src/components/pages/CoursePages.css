@@ -1,0 +1,51 @@
+.course-question{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin-top: 300px;
+    margin-left: 400px;
+    font-size: 20px;
+    align-self: justify;
+    font-family: 'Comfortaa';
+    font-style: normal;
+}
+
+.course-choice {
+    justify-items: center;
+    
+}
+
+button[type=submit] {
+    background-color: #FFBA08;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 20px;
+    padding: 10px;
+    padding-bottom: 10px;
+    margin-top: 80px;
+    font-size: 24px;
+    border: none;
+    outline: none;
+    width: 20%;
+    margin-left: 20%;
+  }
+
+button[type=next] {
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 20px;
+    padding: 10px;
+    padding-bottom: 10px;
+    margin-top: 80px;
+    font-size: 24px;
+    border: none;
+    outline: none;
+    width: 20%;
+    margin-left: 20%;
+    border: 1px solid #FFBA08;
+  }
+
+

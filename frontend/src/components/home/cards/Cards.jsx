@@ -1,8 +1,14 @@
-import React from "react"
 import {Card,} from "react-bootstrap"
 import "./style.css"
+import React, { useState } from 'react';
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+import { Link } from "react-router-dom"
 
 const Cards = () => {
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   return (
     <>
       <section className='about topMarign'>
@@ -18,7 +24,16 @@ const Cards = () => {
     Some quick example text to build on the card title and make up the bulk of
     the card's content.
   </Card.Text>
-  <center><button className="start1">Start</button></center>
+  <center><button className="start1" onClick={handleShow}>
+        Start
+      </button></center>
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Body>We see you haven't logged in yet, would you like to do it now?
+        <Button className="login2" variant="warning" onClick={handleClose}>
+        <Link to='login' style={{textDecoration: "none", color : "black"}}>Log In</Link>
+          </Button>
+        </Modal.Body>
+      </Modal>
 </Card.Body>
 </Card>
 
@@ -31,7 +46,9 @@ const Cards = () => {
     the card's content.
 
   </Card.Text>
-  <center><button className="start2">Start</button></center>
+  <center><button className="start2" onClick={handleShow}>
+        Start
+      </button></center>
 </Card.Body>
 </Card>
 
@@ -44,7 +61,9 @@ const Cards = () => {
     the card's content.
 
   </Card.Text>
-  <center><button className="start3">Start</button></center>
+  <center><button className="start3" onClick={handleShow}>
+        Start
+      </button></center>
 </Card.Body>
 </Card>
 </div>

@@ -74,7 +74,7 @@ func (repo *UserRepositorySQLite) GetUser(ctx context.Context, email, password s
 		&user.Role, &user.IsLogin,
 	)
 	if err != nil {
-		return user, err
+		return user, errors.New("login failed")
 	}
 
 	queryUpdate := `UPDATE users SET is_login = true WHERE email = ?`
@@ -86,7 +86,7 @@ func (repo *UserRepositorySQLite) GetUser(ctx context.Context, email, password s
 
 	_, err = stmtUpdate.ExecContext(ctx, email)
 	if err != nil {
-		return user, err
+		return user, errors.New("login failed")
 	}
 
 	if user.IsLogin {
