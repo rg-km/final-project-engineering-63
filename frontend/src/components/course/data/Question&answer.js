@@ -8,15 +8,11 @@ export const QuestionAnswer= [
         correct: false,
       },
       {
-        choice: "visit	",
+        choice: "visit",
         correct: true,
       },
       {
         choice: "visiting",
-        correct: false,
-      },
-      {
-        choice: "will visit",
         correct: false,
       },
     ],

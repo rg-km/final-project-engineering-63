@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { QuestionAnswer } from "./data/Question&answer"
+import Form from 'react-bootstrap/Form';
+import { NavItem } from 'react-bootstrap';
 
 const Course = () => {
 
@@ -33,16 +35,31 @@ useEffect(() => {
     return () => clearInterval(interval.current);
 }, []);
 
-
 return (
     <div>
         <div className='course-overlay'>
             <div className='course-question'>{question}</div>
-            <label className='course-choice'>
-                {options.map(item => (
-                    <div>{item.choice}</div>
-                    ))}
-            </label>
+            <Form>
+      {['radio'].map((type) => (
+        <div className="mb-3">
+          <Form.Check
+            label="1"
+            name="group1"
+            type={type}
+          />
+          <Form.Check
+            label="2"
+            name="group1"
+            type={type}
+          />
+          <Form.Check
+            label="3"
+            name="group1"
+            type={type}
+          />
+        </div>
+      ))}
+    </Form>
         <div className='course-timer'>{stopwatch}</div>
     </div>
     <button type="submit-answer">Submit</button>

@@ -11,5 +11,4 @@ const CoursePages = () => {
     )
   }
   
-  
   export default CoursePages
