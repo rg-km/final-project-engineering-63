@@ -15,6 +15,19 @@ type UserRepository interface {
 type Repository struct {
 	UserRepository
 }
+type Quiz struct {
+	ID          int64  `db:"id"`
+	Category    string `db:"category"`
+	QuizName	string `db:"quiz_name"`
+}
+
+type QuizItem struct {
+	ID          int64  `db:"id"`
+	Category    string `db:"category"`
+	QuizID   	int64  `db:"product_id"`
+	QuizName	string `db:"product_name"`
+	Quantity    int    `db:"quantity"`
+}
 
 func NewRepository(db *sql.DB) *Repository {
 	return &Repository{

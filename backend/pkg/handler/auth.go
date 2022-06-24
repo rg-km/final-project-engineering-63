@@ -6,7 +6,32 @@ import (
 	"go_jwt/pkg/service"
 	"net/http"
 	"time"
+
+	"github.com/golang-jwt/jwt/v4"
 )
+
+type User struct {
+	Username string `json:"username"`
+	Password string `json:"password"`
+}
+
+type LoginSuccessResponse struct {
+	Username string `json:"username"`
+	Token    string `json:"token"`
+}
+
+type AuthErrorResponse struct {
+	Error string `json:"error"`
+}
+
+var jwtKey = []byte("key")
+
+type Claims struct {
+	Username string
+	Role     string
+	jwt.StandardClaims
+}
+
 
 func (h *Handler) signUp(writer http.ResponseWriter, request *http.Request) {
 	var registerCreateRequest web.RegisterCreateRequest

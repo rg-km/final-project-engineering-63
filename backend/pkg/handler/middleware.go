@@ -1,9 +1,12 @@
 package handler
 
 import (
+	"context"
 	"encoding/json"
 	"go_jwt/model/web"
 	"net/http"
+
+	"github.com/dgrijalva/jwt-go"
 )
 
 func (handler *Handler) AllowOrigin(w http.ResponseWriter, req *http.Request) {
@@ -20,6 +23,75 @@ func (handler *Handler) AllowOrigin(w http.ResponseWriter, req *http.Request) {
 	if req.Method == "OPTIONS" {
 		w.WriteHeader(http.StatusOK)
 	}
+}
+
+func (handler *Handler) AuthMiddleWare(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		handler.AllowOrigin(w, r)
+		encoder := json.NewEncoder(w)
+		// Ambil token dari cookie yang dikirim ketika request
+		c, err := r.Cookie("token")
+		if err != nil {
+			if err == http.ErrNoCookie {
+				// return unauthorized ketika token kosong
+				w.WriteHeader(http.StatusUnauthorized)
+				encoder.Encode(AuthErrorResponse{Error: err.Error()})
+				return
+			}
+			// return bad request ketika field token tidak ada
+			w.WriteHeader(http.StatusBadRequest)
+			encoder.Encode(AuthErrorResponse{Error: err.Error()})
+			return
+		}
+
+		tknStr := c.Value
+
+		claims := &Claims{}
+
+		//parse JWT token ke dalam claim
+		tkn, err := jwt.ParseWithClaims(tknStr, claims, func(token *jwt.Token) (interface{}, error) {
+			return jwtKey, nil
+		})
+
+		if err != nil {
+			if err == jwt.ErrSignatureInvalid {
+				// return unauthorized ketika signature invalid
+				w.WriteHeader(http.StatusUnauthorized)
+				encoder.Encode(AuthErrorResponse{Error: err.Error()})
+				return
+			}
+			// return bad request ketika field token tidak ada
+			w.WriteHeader(http.StatusBadRequest)
+			encoder.Encode(AuthErrorResponse{Error: err.Error()})
+			return
+		}
+
+		//return unauthorized ketika token sudah tidak valid (biasanya karna token expired)
+		if !tkn.Valid {
+			w.WriteHeader(http.StatusUnauthorized)
+			encoder.Encode(AuthErrorResponse{Error: err.Error()})
+			return
+		}
+
+		ctx := context.WithValue(r.Context(), "username", claims.Username)
+		ctx = context.WithValue(ctx, "role", claims.Role)
+		ctx = context.WithValue(ctx, "props", claims)
+		next.ServeHTTP(w, r.WithContext(ctx))
+	})
+}
+
+func (handler *Handler) GET(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		handler.AllowOrigin(w, r)
+		encoder := json.NewEncoder(w)
+		if r.Method != http.MethodGet {
+			w.WriteHeader(http.StatusMethodNotAllowed)
+			encoder.Encode(AuthErrorResponse{Error: "Need GET Method!"})
+			return
+		}
+
+		next.ServeHTTP(w, r)
+	})
 }
 
 func (handler *Handler) POST(next http.Handler) http.Handler {
