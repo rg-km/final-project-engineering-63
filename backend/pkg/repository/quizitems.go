@@ -102,7 +102,7 @@ func (c *QuizItemRepository) InsertQuizItem(quizItem QuizItem) error {
 		return err
 	}
 
-	return nil // TODO: replace this
+	return nil
 }
 
 func (c *QuizItemRepository) IncrementQuizItemQuantity(quizItem QuizItem) error {
@@ -113,7 +113,7 @@ func (c *QuizItemRepository) IncrementQuizItemQuantity(quizItem QuizItem) error 
 	if err != nil {
 		return err
 	}
-	return nil // TODO: replace this
+	return nil
 }
 
 func (c *QuizItemRepository) ResetQuizItems() error {
