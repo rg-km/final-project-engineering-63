@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { QuestionAnswer } from "./data/Question&answer"
+import { QuestionAnswer } from "./data/Question&answer";
+import { useTimer } from "react-timer-hook";
 
 const Course = () => {
 
@@ -11,8 +12,7 @@ function getTimeRemaining(endtime) {
     const total = Date.parse(endtime) - Date.parse(new Date());
     const hours = Math.floor((total % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((total % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((total % (1000 * 60)) / 1000);   
-
+    const seconds = Math.floor((total % (1000 * 60)) / 1000);
 return {
     total, hours, minutes, seconds
     };
@@ -24,15 +24,15 @@ function startCount(endtime) {
         setStopwatch ( (hours > 9 ? hours : '0' + hours) + ':' + (minutes > 9 ? minutes : '0' + minutes) + ':' + (seconds > 9 ? seconds : '0' + seconds))
     }else{
         clearInterval(interval.current);
+        alert('Time up')
     }
 }
 
 useEffect(() => {
-    const endtime = new Date(Date.parse(new Date()) + 3600 * 1000);
+    const endtime = new Date(Date.parse(new Date()) + 3600 * 1);
     interval.current = setInterval(() => startCount(endtime), 1000);
     return () => clearInterval(interval.current);
 }, []);
-
 
 return (
     <div>
