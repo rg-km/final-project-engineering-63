@@ -2,7 +2,6 @@ import React from "react"
 import Login from "../login/Login"
 import "./LoginPages.css"
 
-
 const LoginPages = () => {
     return (
       <>

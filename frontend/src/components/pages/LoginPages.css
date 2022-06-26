@@ -31,8 +31,9 @@ body {
   max-width: 100%;
   display: block;
   height: auto;
-  margin-left: 150px;
-  margin-top: -400px;
+  margin-left: 210px;
+  margin-top: -550px;
+  position: absolute;
 }
 
 .login-box {
