@@ -11,7 +11,7 @@ const Home = () => {
               Let's Level Up Your
               English With Us!
             </h1>
-            <button href="#course" className='primary-btn'>Get Started</button>
+            <button className="margin-button"><a href="#card" className='primary-btn'>Get Started</a></button>
           </div>
             <div className='img'>
               <img src='./assets/home.png' alt='' />

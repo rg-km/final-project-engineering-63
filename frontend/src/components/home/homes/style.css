@@ -35,12 +35,19 @@ z-index: 3;
 position: absolute;
 color: #032B43;
 }
-.primary-btn {
+.margin-button{
+    margin-top: 170px;
     padding: 15px 40px;
-    margin-top: 150px;
+}
+.primary-btn {
+    text-decoration: none;
+    padding: 15px 40px;
+    margin-top: 200px;
     margin-left: 50px;
     background: #ffba08;
     border-radius: 20px;
+    text-align: center;
+    color: black;
 }
 .primary-btn:hover {
     background: #d00000;
