@@ -18,8 +18,8 @@ body {
 .greetings {
   position: absolute;
   font-size: 25px;
-  margin-top: 150px;
-  margin-left: 300px;
+  margin-top: 80px;
+  margin-left: 330px;
   text-align: center;
   max-width: 100%;
   display: block;
@@ -32,24 +32,25 @@ body {
   display: block;
   height: auto;
   margin-left: 210px;
-  margin-top: -550px;
+  margin-top: -549px;
   position: absolute;
 }
 
 .login-box {
-  max-width: 100%;
-  margin-top: 150px;
-  margin-bottom: 80px;
-  margin-left: 450px;
-  flex-basis: 400px;
+  margin-top: 40px;
+  margin-bottom: 130px;
+  margin-left: 550px;
+  flex-basis: 500px;
   background: #fff;
-  padding: 50px;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+  padding: 45px 50px 150px 50px;
+  box-shadow: 5px 5px 10px 10px rgba(0, 0, 0, 0.25);
   border-radius: 50px;
   display: flex;
   flex-direction: column;
   align-items: left;
   justify-content: center;
+  max-width: 500px;
+  margin-bottom: 80px;
 }
 
 .login-box h2 {

@@ -52,6 +52,7 @@ color: #032B43;
 .primary-btn:hover {
     background: #d00000;
     box-shadow: 0 13px 27px 0 rgb(245 78 162 / 25%);
+    color: black;
 }
 .home .right {
     margin-top: 15%;
