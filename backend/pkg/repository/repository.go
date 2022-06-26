@@ -1,23 +1,38 @@
 package repository
 
 import (
-	"context"
 	"database/sql"
 	"go_jwt/model/domain"
+	"go_jwt/model/web"
 )
 
-type UserRepository interface {
-	Save(ctx context.Context, user domain.UserDomain) (domain.UserDomain, error)
-	GetUser(ctx context.Context, email, password string) (domain.UserDomain, error)
-	Logout(ctx context.Context, username string) (bool, error)
+type AuthRepository interface {
+	Save(user domain.UserDomain, email string) (domain.UserDomain, error)
+	FindUser(email, password string) (domain.UserDomain, error)
+}
+
+type DashboardRepository interface {
+	SaveQuiz(quizDomain domain.QuizDomain, quizReq web.QuizRequest) (domain.QuizDomain, error)
+	FindAllAdminQuestions() ([]web.QuizResponse, error)
+	DeleteAdminQuestionById(questionId int32) (bool, error)
+}
+
+type HomeRepository interface {
+	FindCategoryByName(name string) (domain.CategoryDomain, error)
+	FindCategoryById(categoryId int32) (domain.CategoryDomain, error)
+	FindQuizByCategoryIdWithPagination(category domain.CategoryDomain, page, limit int32) ([]web.QuizResponse, error)
 }
 
 type Repository struct {
-	UserRepository
+	AuthRepository
+	DashboardRepository
+	HomeRepository
 }
 
 func NewRepository(db *sql.DB) *Repository {
 	return &Repository{
-		UserRepository: NewUserRepository(db),
+		AuthRepository:      NewAuthRepository(db),
+		DashboardRepository: NewDashboardRepository(db),
+		HomeRepository:      NewHomeRepository(db),
 	}
 }

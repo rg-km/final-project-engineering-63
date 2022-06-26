@@ -2,7 +2,6 @@ package web
 
 import (
 	"errors"
-	"strings"
 )
 
 type LoginCreateRequest struct {
@@ -16,45 +15,59 @@ type RegisterCreateRequest struct {
 	Password string `json:"password"`
 }
 
-func (l *LoginCreateRequest) PrepareLogin() {
-	l.Email = strings.TrimSpace(l.Email)
-	l.Password = strings.TrimSpace(l.Password)
+type QuizRequest struct {
+	Question   string `json:"question"`
+	Category   string `json:"category"`
+	AnswerA    string `json:"a"`
+	AnswerB    string `json:"b"`
+	AnswerC    string `json:"c"`
+	AnswerTrue string `json:"answer_true"`
 }
 
-func (l *LoginCreateRequest) ValidateLogin(action string) error {
-	switch strings.ToLower(action) {
-	case "login":
-		if l.Email == "" {
-			return errors.New("required Email")
-		}
-		if l.Password == "" {
-			return errors.New("required Password")
-		}
-		return nil
+func (q *QuizRequest) ValidateQuiz() error {
+	if q.Question == "" {
+		return errors.New("required Question")
+	}
+	if q.Category == "" {
+		return errors.New("required Category")
+	}
+	if q.AnswerA == "" {
+		return errors.New("required AnswerA")
+	}
+	if q.AnswerB == "" {
+		return errors.New("required AnswerB")
+	}
+	if q.AnswerC == "" {
+		return errors.New("required AnswerC")
+	}
+	if q.AnswerTrue == "" {
+		return errors.New("required AnswerTrue")
 	}
 
-	return errors.New("invalid Action")
+	return nil
 }
 
-func (r *RegisterCreateRequest) PrepareRegister() {
-	r.Email = strings.TrimSpace(r.Email)
-	r.Password = strings.TrimSpace(r.Password)
-
-}
-
-func (r *RegisterCreateRequest) ValidateRegister(action string) error {
-	switch strings.ToLower(action) {
-	case "create":
-
-		if r.Email == "" {
-			return errors.New("required Email")
-		}
-		if r.Password == "" {
-			return errors.New("required Password")
-		}
-
-		return nil
+func (l *LoginCreateRequest) ValidateLogin() error {
+	if l.Email == "" {
+		return errors.New("required Email")
+	}
+	if l.Password == "" {
+		return errors.New("required Password")
 	}
 
-	return errors.New("invalid Action")
+	return nil
+}
+
+func (r *RegisterCreateRequest) ValidateRegister() error {
+	if r.Username == "" {
+		return errors.New("required Username")
+	}
+	if r.Email == "" {
+		return errors.New("required Email")
+	}
+	if r.Password == "" {
+		return errors.New("required Password")
+	}
+
+	return nil
 }

@@ -10,5 +10,6 @@ func GeneratePasswordHash(password string) string {
 	hash := sha1.New()
 	hash.Write([]byte(password))
 
-	return fmt.Sprintf("%x", hex.EncodeToString(hash.Sum(nil)))
+	sha := hex.EncodeToString(hash.Sum(nil))
+	return fmt.Sprint(sha)
 }

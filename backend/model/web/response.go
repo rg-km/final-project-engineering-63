@@ -11,9 +11,15 @@ type LoginResponse struct {
 	Token string `json:"token"`
 }
 
-type ProductResponse struct {
-	Name     string `json:"name"`
-	Price    int    `json:"price"`
-	Category string `json:"category"`
-	Quantity int    `json:"quantity"`
+type QuizResponse struct {
+	Id       int32          `json:"id"`
+	Question string         `json:"question"`
+	Category string         `json:"category"`
+	Answer   AnswerResponse `json:"answer"`
+}
+
+type AnswerResponse struct {
+	AnswerA string `json:"a"`
+	AnswerB string `json:"b"`
+	AnswerC string `json:"c"`
 }

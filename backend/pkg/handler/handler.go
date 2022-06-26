@@ -3,7 +3,8 @@ package handler
 import (
 	"fmt"
 	"go_jwt/pkg/service"
-	"net/http"
+
+	"github.com/julienschmidt/httprouter"
 )
 
 type Handler struct {
@@ -16,14 +17,46 @@ func NewHandler(services *service.Service) *Handler {
 	}
 }
 
-func (handler *Handler) InitRoutes() *http.ServeMux {
-	router := http.NewServeMux()
+func (handler *Handler) InitRoutes() *httprouter.Router {
+	router := httprouter.New()
 
-	fmt.Printf("\n\t[INFO] Running in localhost:%d\n", 8080)
+	fmt.Println("=========================")
+	fmt.Println("Running in localhost:8080")
+	fmt.Println("=========================")
 
-	router.Handle("/auth/sign-up", handler.POST(http.HandlerFunc(handler.signUp)))
-	router.Handle("/auth/sign-in", handler.POST(http.HandlerFunc(handler.signIn)))
-	router.Handle("/auth/sign-out", handler.POST(http.HandlerFunc(handler.signOut)))
+	router.POST("/auth/register", handler.signUp)
+
+	router.POST("/auth/login", handler.signIn)
+
+	router.POST("/admin/quizzes/create",
+		handler.AuthMiddleWare(
+			handler.AdminMiddleWare(
+				handler.createQuiz,
+			),
+		),
+	)
+
+	router.GET("/admin/quizzes",
+		handler.AuthMiddleWare(
+			handler.AdminMiddleWare(
+				handler.getAdminQuestions,
+			),
+		),
+	)
+
+	router.DELETE("/admin/quizzes/:questionId",
+		handler.AuthMiddleWare(
+			handler.AdminMiddleWare(
+				handler.deleteAdminQuestionById,
+			),
+		),
+	)
+
+	router.GET("/home/start-quiz/:categoryId",
+		handler.AuthMiddleWare(
+			handler.getQuizByCategoryIdWithPagination,
+		),
+	)
 
 	return router
 }

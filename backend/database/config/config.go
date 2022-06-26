@@ -1,7 +1,6 @@
 package config
 
 import (
-	"context"
 	"database/sql"
 	"go_jwt/helper"
 	"log"
@@ -12,11 +11,10 @@ import (
 )
 
 const (
-	dbname = "go_jwt"
+	dbname = "fpe_63"
 )
 
 func DBConnect() (*sql.DB, error) {
-	// Remove DB If Name Already Exist
 	os.RemoveAll("database/" + dbname + ".db")
 
 	log.Println("Creating " + dbname + ".db...")
@@ -35,10 +33,7 @@ func DBConnect() (*sql.DB, error) {
 	db.SetConnMaxLifetime(60 * time.Minute)
 	db.SetConnMaxIdleTime(10 * time.Minute)
 
-	ctx, cancelfunc := context.WithTimeout(context.Background(), 5*time.Second)
-	defer cancelfunc()
-
-	err = db.PingContext(ctx)
+	err = db.Ping()
 	helper.PanicIfErrorWithMessage("Erorr when ping database : ", err)
 
 	log.Printf("Connected to DB %s successfully\n", dbname)
