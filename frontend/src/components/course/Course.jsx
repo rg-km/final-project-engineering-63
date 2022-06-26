@@ -1,7 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { QuestionAnswer } from './data/QuestionAnswer';
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+import "./Course.css"
 
 const Course = () => {
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   const interval = useRef(null);
   const [stopwatch, setStopwatch] = useState('00:00:00');
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -39,6 +45,7 @@ const Course = () => {
       setStopwatch((hours > 9 ? hours : '0' + hours) + ':' + (minutes > 9 ? minutes : '0' + minutes) + ':' + (seconds > 9 ? seconds : '0' + seconds));
     } else {
       clearInterval(interval.current);
+      setShow(true)
     } 
   }
 
@@ -53,6 +60,13 @@ const Course = () => {
       <div className="course-overlay">
         <div className="course-question">{currentIndex + 1}. {question}</div>
         <div type="radio"className="course-choice">
+        <Modal show={show} onHide={handleClose}>
+      <Modal.Body className="login3"><p>Times Up!!!</p>
+      <Button className="login2" variant="warning" onClick={handleClose}>Close
+        </Button>
+      </Modal.Body>
+      </Modal>
+      <div className="course-timer">{stopwatch}</div>
             {options.map((item) => (
                 <div><input type="radio" name="group" class="form-check-input" id="radio"/>{item.choice}</div>
             ))}
@@ -76,7 +90,6 @@ const Course = () => {
           />
         </div>
       ))} */}
-        <div className="course-timer">{stopwatch}</div>
       </div>
       <button type="submit-answer">Submit</button>
       <button disabled= {currentIndex === 0 ? true : false} type= "button-previous" onClick={() => previousQuestion()}>Previous</button>
