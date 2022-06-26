@@ -1,20 +1,29 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { QuestionAnswer } from './data/QuestionAnswer';
-import Form from 'react-bootstrap/Form';
-import { NavItem } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import "./Course.css"
-
 
 const Course = () => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  const arr = ['A', 'B', 'C', 'D'];
-  const { id, question, options } = QuestionAnswer[0];
   const interval = useRef(null);
   const [stopwatch, setStopwatch] = useState('00:00:00');
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const { id, question, options } = QuestionAnswer[currentIndex];
+
+  const nextQuestion = () => {
+    if(QuestionAnswer.length - 1 === currentIndex)
+    return;
+    setCurrentIndex(currentIndex + 1);
+  };
+
+  const previousQuestion = () => {
+    if(currentIndex === 0)
+    return;
+    setCurrentIndex(currentIndex - 1);
+  };
 
   function getTimeRemaining(endtime) {
     const total = Date.parse(endtime) - Date.parse(new Date());
@@ -37,7 +46,7 @@ const Course = () => {
     } else {
       clearInterval(interval.current);
       setShow(true)
-    }
+    } 
   }
 
   useEffect(() => {
@@ -49,19 +58,20 @@ const Course = () => {
   return (
     <div>
       <div className="course-overlay">
-        <div className="course-question">{question}</div>
-      <Modal show={show} onHide={handleClose}>
+        <div className="course-question">{currentIndex + 1}. {question}</div>
+        <div type="radio"className="course-choice">
+        <Modal show={show} onHide={handleClose}>
       <Modal.Body className="login3"><p>Times Up!!!</p>
       <Button className="login2" variant="warning" onClick={handleClose}>Close
         </Button>
       </Modal.Body>
       </Modal>
       <div className="course-timer">{stopwatch}</div>
-        <Form className='choice'>
-          {QuestionAnswer[0].options.map((item, i) => (
-              <Form.Check label={item.choice} name="group1" value={item.choice} type={'radio'} />
-          ))}
-          {/* {['radio'].map((type) => (
+            {options.map((item) => (
+                <div><input type="radio" name="group" class="form-check-input" id="radio"/>{item.choice}</div>
+            ))}
+        </div>
+          {/* {['radio'].map((item, type) => (
         <div className="mb-3">
           <Form.Check
             label="1"
@@ -80,11 +90,10 @@ const Course = () => {
           />
         </div>
       ))} */}
-        </Form>
-        
       </div>
       <button type="submit-answer">Submit</button>
-      <button type="next">Next</button>
+      <button disabled= {currentIndex === 0 ? true : false} type= "button-previous" onClick={() => previousQuestion()}>Previous</button>
+      <button disabled= {QuestionAnswer.length - 1 === currentIndex ? true : false} type= "button-next" onClick={() => nextQuestion()}>Next</button>
     </div>
   );
 };

@@ -17,4 +17,22 @@ export const QuestionAnswer = [
       },
     ],
   },
+    {
+    id: 2,
+    question: 'Children always …….. their parents.',
+    options: [
+      {
+        choice: 'love',
+        correct: true,
+      },
+      {
+        choice: 'are loving',
+        correct: true,
+      },
+      {
+        choice: 'loves',
+        correct: false,
+      },
+    ],
+  },
 ];
