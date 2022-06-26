@@ -12,7 +12,7 @@ import RegisterPages from './components/pages/RegisterPages';
 const App = () => {
   return (
     <>
-      {/* <Router>
+      {/* /* <Router>
         <Header />
         <Switch>
           <Route path="/" exact component={HomePages} />
@@ -22,13 +22,8 @@ const App = () => {
           <Route path="/register" exact component={RegisterPages} />
         </Switch>
         <Footer />
-<<<<<<< HEAD
       </Router> */}
       <CoursePages />
-=======
-      </Router>
-      {/* <CoursePages /> */}
->>>>>>> b2abd0dd06c25dd2704837ed2ff1dca009a53840
     </>
   );
 };

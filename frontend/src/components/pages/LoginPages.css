@@ -32,11 +32,7 @@ body {
   display: block;
   height: auto;
   margin-left: 210px;
-<<<<<<< HEAD
-  margin-top: -550px;
-=======
   margin-top: -549px;
->>>>>>> b2abd0dd06c25dd2704837ed2ff1dca009a53840
   position: absolute;
 }
 
@@ -47,7 +43,7 @@ body {
   flex-basis: 500px;
   background: #fff;
   padding: 45px 50px 150px 50px;
-  box-shadow: 5px 5px 10px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 5px 5px 10px 10pxQ rgba(0, 0, 0, 0.25);
   border-radius: 50px;
   display: flex;
   flex-direction: column;

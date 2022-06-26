@@ -17,7 +17,6 @@ export const QuestionAnswer = [
       },
     ],
   },
-<<<<<<< HEAD
     {
     id: 2,
     question: 'Children always …….. their parents.',
@@ -36,6 +35,4 @@ export const QuestionAnswer = [
       },
     ],
   },
-=======
->>>>>>> b2abd0dd06c25dd2704837ed2ff1dca009a53840
 ];
