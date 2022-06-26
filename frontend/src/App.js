@@ -12,9 +12,10 @@ import RegisterPages from './components/pages/RegisterPages';
 const App = () => {
   return (
     <>
-      {/* /* <Router>
+      <Router>
         <Header />
         <Switch>
+          <CoursePages />
           <Route path="/" exact component={HomePages} />
           <Route path="/login" exact component={LoginPages} />
           <Route path="/course" exact component={CoursePages} />
@@ -22,8 +23,7 @@ const App = () => {
           <Route path="/register" exact component={RegisterPages} />
         </Switch>
         <Footer />
-      </Router> */}
-      <CoursePages />
+      </Router>
     </>
   );
 };
