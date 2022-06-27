@@ -1,0 +1,77 @@
+.boxCard{
+    height:120px;
+    background-color: white;
+}
+.topMarign {
+    margin-top: 400px !important;
+    background-color: #E6F5F9;
+}
+.cards{
+    padding-top: 10px;
+    font-family: 'mali', sans-serif;
+}
+.start1{
+    background-color: white;
+    color: #d00000;
+    box-sizing: border-box;
+width: 145px;
+height: 43px;
+border-radius: 20px;
+}
+.start2{
+    background-color: white;
+    color: #3DB2D2;
+    box-sizing: border-box;
+width: 145px;
+height: 43px;
+border-radius: 20px;
+}
+.start3{
+    background-color: white;
+    color: #ffba08;
+    box-sizing: border-box;
+width: 145px;
+height: 43px;
+border-radius: 20px;
+}
+.login2{
+margin-top: 10%;
+}
+.login3{
+    text-align: center;
+}
+p{
+    color: black;
+    font-weight: bold;
+}
+.card-img1{
+    padding: 40px;
+    background-color: #d00000;
+}
+.card-img2{
+    padding: 40px;
+    background-color: #3DB2D2;
+}
+.card-img3{
+    padding: 40px;
+    background-color: #ffba08;
+}
+.card-body1{
+    background: #d00000;
+    border-radius: 20px;
+    border-style: none;
+}
+.card-body2{
+    background-color: #3DB2D2;
+    border-radius: 20px;
+    border-style: none;
+    
+}
+.card-body3{
+    background-color: #ffba08;
+    border-radius: 20px;
+    border-style: none;
+}
+.ct{
+
+}

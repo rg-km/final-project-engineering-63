@@ -1,4 +1,5 @@
 import React from "react"
+import "./style.css"
 
 const Home = () => {
   return (
@@ -10,7 +11,7 @@ const Home = () => {
               Let's Level Up Your
               English With Us!
             </h1>
-            <button className='primary-btn'>Get Started</button>
+            <button className="margin-button"><a href="#card" className='primary-btn'>Get Started</a></button>
           </div>
             <div className='img'>
               <img src='./assets/home.png' alt='' />
@@ -18,7 +19,6 @@ const Home = () => {
           {/* </div> */}
         </div>
       </section>
-      <a href="#" class="up-icon"><i class="fas fa-chevron-circle-up"></i></a>
     </>
   )
 }
