@@ -69,12 +69,12 @@ const Course = () => {
             </Modal.Body>
            </Modal>
         <div className="course-question">{currentIndex + 1}. {question}</div>
-          <label className="radio">
+          <form className="radio">
             {options.map((item, index) => (   
-              <div><input type="radio" name="options" class="form-check-input" id= {`radio-${index}`} value=""/>
+              <div><input type="radio" name="group1" class="form-check-input" id= {`radio-${index}`} value=""/>
               <label>{item.choice}</label></div>
             ))}
-        </label>
+        </form>
           <h2><button  className="course-button-previous" 
             disabled= {currentIndex === 0 ? true : false} type= "button-previous" onClick={() => previousQuestion()}>Previous</button>
           <button className="course-button-next" 
