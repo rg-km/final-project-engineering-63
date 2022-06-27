@@ -8,6 +8,7 @@ import LoginPages from './components/pages/LoginPages';
 import CoursePages from './components/pages/CoursePages';
 import ScoreboardPages from './components/pages/scoreboardPages';
 import RegisterPages from './components/pages/RegisterPages';
+import ResultPages from './components/pages/ResultPages';
 
 const App = () => {
   return (
@@ -21,9 +22,11 @@ const App = () => {
           <Route path="/course" exact component={CoursePages} />
           <Route path="/board" exact component={ScoreboardPages} />
           <Route path="/register" exact component={RegisterPages} />
+          <Route path="/result" exact component={ResultPages} />
         </Switch>
         <Footer />
       </Router>
+      {/* <Result /> */}
       {/* <CoursePages /> */}
     </>
   );
