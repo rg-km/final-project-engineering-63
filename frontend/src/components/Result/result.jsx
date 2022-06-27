@@ -1,12 +1,13 @@
 import React from "react"
 import TestResult from "./ResultTest"
 import "./style.css"
+import { Link } from "react-router-dom"
 
 const Result = () => {
   
-  const handleClick = (e) => {
-    console.log(e.target)
-}
+//   const handleClick = (e) => {
+//     console.log(e.target)
+// }
 
   return (
     <div className="result">
@@ -15,7 +16,7 @@ const Result = () => {
       <TestResult />
 
       <div className="toScoreboard">
-        <button onClick={handleClick} data-id='scoreboard'>Scoreboard</button>
+        <button data-id='scoreboard'><Link to="board" style={{textDecoration: "none", color : "black"}}>Scoreboard</Link></button>
       </div>
     </div>
   )

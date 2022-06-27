@@ -3,6 +3,7 @@ import { QuestionAnswer } from './data/QuestionAnswer';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import "./Course.css"
+import { Link } from "react-router-dom"
 
 const Course = () => {
   const [show, setShow] = useState(false);
@@ -59,7 +60,8 @@ const Course = () => {
     <div>
       <div className="course-overlay">
         <div className="course-submit">
-          <button type="submit-answer">Submit</button>
+          <button type="submit-answer">
+          <Link to='Result'style={{textDecoration: "none", color : "black"}}>Submit</Link></button>
         </div>
         <div className="course-timer">{stopwatch}</div>
           <Modal show={show} onHide={handleClose}>
@@ -69,12 +71,12 @@ const Course = () => {
             </Modal.Body>
            </Modal>
         <div className="course-question">{currentIndex + 1}. {question}</div>
-          <label className="radio">
+          <form className="radio">
             {options.map((item, index) => (   
-              <div><input type="radio" name="options" class="form-check-input" id= {`radio-${index}`} value=""/>
+              <div><input type="radio" name="group1" class="form-check-input" id= {`radio-${index}`} value=""/>
               <label>{item.choice}</label></div>
             ))}
-        </label>
+        </form>
           <h2><button  className="course-button-previous" 
             disabled= {currentIndex === 0 ? true : false} type= "button-previous" onClick={() => previousQuestion()}>Previous</button>
           <button className="course-button-next" 

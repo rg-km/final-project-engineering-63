@@ -1,6 +1,6 @@
 export const QuestionAnswer = [
   {
-    id: 1,
+    id: "option1",
     question: 'Was Aminah  …  my house at this time yesterday?',
     options: [
       {
@@ -18,7 +18,7 @@ export const QuestionAnswer = [
     ],
   },
     {
-    id: 2,
+    id: "options2",
     question: 'Children always …….. their parents.',
     options: [
       {
