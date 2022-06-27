@@ -32,7 +32,7 @@ const Header = () => {
               </li>
   <li className="account"><AccountCircleIcon/>
   <NavDropdown id="navbarScrollingDropdown">
-          <NavDropdown.Item href="#action3">Nama</NavDropdown.Item>
+          <NavDropdown.Item href="#action3">User</NavDropdown.Item>
           <NavDropdown.Item href="#action4">Log Out &nbsp;<LogoutIcon/></NavDropdown.Item>
         </NavDropdown>
 </li>

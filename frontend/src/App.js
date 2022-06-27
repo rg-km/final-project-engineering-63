@@ -12,7 +12,7 @@ import RegisterPages from './components/pages/RegisterPages';
 const App = () => {
   return (
     <>
-      /* <Router>
+      <Router>
         <Header />
         <Switch>
           <Route path="/" exact component={HomePages} />

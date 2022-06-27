@@ -17,7 +17,7 @@ header ul li {
 }
 header ul li a {
     font-weight: 500;
-    font-size: larger;
+    font-size: 25px;
     transition: 0.5s;
     padding-top: 10px;
 }
@@ -76,6 +76,6 @@ header.active {
     padding-top: 7px;
 }
 .account{
-    padding-top: 12px;
+    padding-top: 18px;
 }
 /*------------header----------*/
