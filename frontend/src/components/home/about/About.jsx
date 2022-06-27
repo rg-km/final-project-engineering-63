@@ -12,6 +12,7 @@ const About = () => {
   Each course contains 10 to 20 different questions with an adjusted level of difficulty. 
   After completing one of the courses, you can get a gift in the form of a certificate. 
   This website is very useful for practicing your English skills and of course it's free.
+  This website is worked on by 6 people consisting of 4 frontends and 2 backends.
   </p>
   </div>
   

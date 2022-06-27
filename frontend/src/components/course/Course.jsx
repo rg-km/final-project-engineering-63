@@ -58,42 +58,31 @@ const Course = () => {
   return (
     <div>
       <div className="course-overlay">
+        <div className="course-submit">
+          <button type="submit-answer">Submit</button>
+        </div>
+        <div className="course-timer">{stopwatch}</div>
+          <Modal show={show} onHide={handleClose}>
+            <Modal.Body className="login3"><p>Times Up!!!</p>
+              <Button className="login2" variant="warning" onClick={handleClose}>Close
+              </Button>
+            </Modal.Body>
+           </Modal>
         <div className="course-question">{currentIndex + 1}. {question}</div>
-        <div type="radio"className="course-choice">
-        <Modal show={show} onHide={handleClose}>
-      <Modal.Body className="login3"><p>Times Up!!!</p>
-      <Button className="login2" variant="warning" onClick={handleClose}>Close
-        </Button>
-      </Modal.Body>
-      </Modal>
-      <div className="course-timer">{stopwatch}</div>
-            {options.map((item) => (
-                <div><input type="radio" name="group" class="form-check-input" id="radio"/>{item.choice}</div>
+          <label className="radio">
+            {options.map((item, index) => (   
+              <div><input type="radio" name="options" class="form-check-input" id= {`radio-${index}`} value=""/>
+              <label>{item.choice}</label></div>
             ))}
-        </div>
-          {/* {['radio'].map((item, type) => (
-        <div className="mb-3">
-          <Form.Check
-            label="1"
-            name="group1"
-            type={type}
-          />
-          <Form.Check
-            label="2"
-            name="group1"
-            type={type}
-          />
-          <Form.Check
-            label="3"
-            name="group1"
-            type={type}
-          />
-        </div>
-      ))} */}
+        </label>
+          <h2><button  className="course-button-previous" 
+            disabled= {currentIndex === 0 ? true : false} type= "button-previous" onClick={() => previousQuestion()}>Previous</button>
+          <button className="course-button-next" 
+             disabled= {QuestionAnswer.length - 1 === currentIndex ? true : false} type= "button-next" onClick={() => 
+              nextQuestion()}>Next</button></h2>
+        <div>
       </div>
-      <button type="submit-answer">Submit</button>
-      <button disabled= {currentIndex === 0 ? true : false} type= "button-previous" onClick={() => previousQuestion()}>Previous</button>
-      <button disabled= {QuestionAnswer.length - 1 === currentIndex ? true : false} type= "button-next" onClick={() => nextQuestion()}>Next</button>
+    </div>
     </div>
   );
 };
