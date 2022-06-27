@@ -1,5 +1,5 @@
 import React from "react"
-import TestResult from "./resultTest"
+import TestResult from "./ResultTest"
 import "./style.css"
 
 const Result = () => {
