@@ -16,7 +16,7 @@ const Result = () => {
       <TestResult />
 
       <div className="toScoreboard">
-        <button data-id='scoreboard'><Link to="board" style={{textDecoration: "none", color : "black"}}>Scoreboard</Link></button>
+        <button><Link to= "board" style={{textDecoration: "none", color : "black"}}>Scoreboard</Link></button>
       </div>
     </div>
   )
