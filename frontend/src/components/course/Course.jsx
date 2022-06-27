@@ -12,13 +12,6 @@ const Course = () => {
   const [stopwatch, setStopwatch] = useState('00:00:00');
   const [currentIndex, setCurrentIndex] = useState(0);
   const { id, question, options } = QuestionAnswer[currentIndex];
-  const [quiz, setQuiz] = useState(QuestionAnswer);
-
-  const selectOption = (indexSelected) => {
-    setQuiz(quiz.map((item, index) => 
-      index === indexSelected ? { ...item, selected: true } : item
-    ));
-  }
 
   const nextQuestion = () => {
     if(QuestionAnswer.length - 1 === currentIndex)
@@ -76,12 +69,12 @@ const Course = () => {
             </Modal.Body>
            </Modal>
         <div className="course-question">{currentIndex + 1}. {question}</div>
-          <div className="course-choice">
-            {options.map((item, index) => (  
-              <div><input type="radio" size="20px" name="group" class="form-check-input" id="radio"/>
-              {item.choice}</div>
+          <label className="radio">
+            {options.map((item, index) => (   
+              <div><input type="radio" name="options" class="form-check-input" id= {`radio-${index}`} value=""/>
+              <label>{item.choice}</label></div>
             ))}
-        </div>
+        </label>
           <h2><button  className="course-button-previous" 
             disabled= {currentIndex === 0 ? true : false} type= "button-previous" onClick={() => previousQuestion()}>Previous</button>
           <button className="course-button-next" 
