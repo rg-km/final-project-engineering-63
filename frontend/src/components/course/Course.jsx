@@ -3,6 +3,7 @@ import { QuestionAnswer } from './data/QuestionAnswer';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import "./Course.css"
+import { Link } from "react-router-dom"
 
 const Course = () => {
   const [show, setShow] = useState(false);
@@ -59,7 +60,8 @@ const Course = () => {
     <div>
       <div className="course-overlay">
         <div className="course-submit">
-          <button type="submit-answer">Submit</button>
+          <button type="submit-answer">
+          <Link to='Result'style={{textDecoration: "none", color : "black"}}>Submit</Link></button>
         </div>
         <div className="course-timer">{stopwatch}</div>
           <Modal show={show} onHide={handleClose}>

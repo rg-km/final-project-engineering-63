@@ -16,7 +16,7 @@ const App = () => {
       <Router>
         <Header />
         <Switch>
-          <CoursePages />
+          {/* <CoursePages /> */}
           <Route path="/" exact component={HomePages} />
           <Route path="/login" exact component={LoginPages} />
           <Route path="/course" exact component={CoursePages} />
