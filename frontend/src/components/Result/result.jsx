@@ -1,5 +1,5 @@
 import React from "react"
-import TestResult from "./ResultTest"
+import TestResult from "./resultTest"
 import "./style.css"
 import { Link } from "react-router-dom"
 
