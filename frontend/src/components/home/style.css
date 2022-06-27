@@ -14,11 +14,12 @@ footer .SocailIcon i {
 }
 footer h2 {
     margin-bottom: 30px;
-    font-size: 20px;
+    font-size: 25px;
 }
 footer li {
     color: #000000;
     margin-bottom: 15px;
+    font-size: 20px;
 }
 footer li:before {
     content: "·";
@@ -35,16 +36,21 @@ footer .box p {
 footer span {
     color: #000000;
     opacity: 1;
+    
 }
 footer .icon {
     margin-top: 20px;
     display: flex;
+    font-size: 17px;
 }
 footer .icon i {
     color: #000000;
     margin-right: 20px;
     width: 20px;
     height: 20px;
+}
+.copy{
+    font-size: 23px;
 }
 .legal {
     display: flex;
@@ -55,10 +61,10 @@ footer .icon i {
 }
 /*------------Globa----------*/
 .SocailIcon i {
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     text-align: center;
-    line-height: 35px;
+    line-height: 40px;
     margin-right: 10px;
     border-radius: 50%;
     transition: 0.5s;

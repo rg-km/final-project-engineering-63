@@ -24,6 +24,7 @@ const App = () => {
         </Switch>
         <Footer />
       </Router>
+      {/* <CoursePages /> */}
     </>
   );
 };

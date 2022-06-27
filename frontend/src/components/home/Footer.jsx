@@ -8,7 +8,8 @@ const Footer = () => {
         <div className='container grid1'>
           <div className='box'>
             <img src='./assets/logo3.png' alt='' />
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p>Edumar also known as Educational Grammar
+  is a website-based english quiz where there are three types of courses namely Vocab, Grammar and Tenses.</p>
             <br></br>
             <div className='SocailIcon'>
               <i className='fab fa-facebook-f facebook'></i>
@@ -44,7 +45,7 @@ const Footer = () => {
             </div>
             <div className='icon'>
               <i class='fa fa-phone'></i>
-              <label>Phone : +620147995844</label>
+              <label>Phone : +62 858-6030-1670</label>
             </div>
             <div className='icon'>
               <i class='fa fa-envelope'></i>
@@ -53,7 +54,7 @@ const Footer = () => {
           </div>
         </div>
         <div className='d-flex justify-content-center legal container'>
-          <p style={{textAlign:"center"}}>Copyright @2022. All rights reserved.</p>
+          <p className="copy" style={{textAlign:"center"}}>Copyright @2022. All rights reserved.</p>
         </div>
         <a href="#" class="up-icon"><i class="fas fa-chevron-circle-up"></i></a>
       </footer>

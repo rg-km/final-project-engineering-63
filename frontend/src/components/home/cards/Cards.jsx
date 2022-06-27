@@ -21,8 +21,8 @@ const Cards = () => {
 <center><img className="card-img1" src="./assets/vocab.png" /></center>
   <Card.Title style={{color : "white"}}><center>VOCAB</center></Card.Title>
   <Card.Text style={{color : "white", textAlign:"justify"}}>
-    Some quick example text to build on the card title and make up the bulk of
-    the card's content.
+    
+This course contains several questions that have been specially arranged to broaden your knowledge, especially about vocabulary.
   </Card.Text>
   <center><button className="start1" onClick={handleShow}>
         Start
@@ -42,8 +42,8 @@ const Cards = () => {
 <center><img className="card-img2" src="./assets/grammar.png" /></center>
   <Card.Title style={{color : "white"}}><center>GRAMMAR</center></Card.Title>
   <Card.Text style={{color : "white", textAlign:"justify"}}>
-    Some quick example text to build on the card title and make up the bulk of
-    the card's content.
+    
+This course contains several questions that have been specially arranged to broaden your knowledge, especially about grammar.
 
   </Card.Text>
   <center><button className="start2" onClick={handleShow}>
@@ -57,8 +57,8 @@ const Cards = () => {
 <center><img className="card-img3" src="./assets/tenses.png" /></center>
   <Card.Title style={{color : "white"}}><center>TENSES</center></Card.Title>
   <Card.Text style={{color : "white", textAlign:"justify"}}>
-    Some quick example text to build on the card title and make up the bulk of
-    the card's content.
+    
+This course contains several questions that have been specially arranged to broaden your knowledge, especially about tenses.
 
   </Card.Text>
   <center><button className="start3" onClick={handleShow}>
